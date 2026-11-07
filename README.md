@@ -130,6 +130,7 @@ incident is created and nobody is notified).
 
 - `binary_sensor.digital_lifeline_portal_connection`: on while the portal answers (attribute `queued_events`).
 - `binary_sensor.digital_lifeline_open_incident`: on while the portal has an open incident.
+- `sensor.digital_lifeline_watched_sensors`: number of linked sensors; the attributes list them per category (`val_detectie`, `noodknop`, `rookmelder`, `waterlek`) with entity id, name and current state. Handy to check your selection at a glance.
 - Event `digital_lifeline_incident`: fired when the incident list changes (`incidents` in the event data),
   handy for your own automations (siren, lights, TTS). It arrives within about a minute.
 - Service `digital_lifeline.send_test_event`: sends a flagged test through the full path (no incident, nobody notified).
@@ -252,6 +253,7 @@ incident en niemand krijgt een melding).
 
 - `binary_sensor.digital_lifeline_portal_connection`: aan zolang het portaal antwoordt (attribuut `queued_events`).
 - `binary_sensor.digital_lifeline_open_incident`: aan zolang er een open incident is.
+- `sensor.digital_lifeline_watched_sensors`: aantal gekoppelde sensoren; de attributen tonen ze per categorie (`val_detectie`, `noodknop`, `rookmelder`, `waterlek`) met entiteit-id, naam en actuele status. Handig om je keuze in één oogopslag te controleren.
 - Event `digital_lifeline_incident`: wordt afgevuurd als de incidentenlijst wijzigt (`incidents` in de
   eventdata), handig voor eigen automatiseringen (sirene, lampen, TTS). Komt binnen ongeveer een minuut aan.
 - Service `digital_lifeline.send_test_event`: stuurt een gemarkeerde test door de hele keten.
