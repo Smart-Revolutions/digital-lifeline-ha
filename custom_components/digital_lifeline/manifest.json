@@ -1,13 +1,13 @@
 {
   "domain": "digital_lifeline",
   "name": "DigiLifeline",
-  "codeowners": ["@Dreamfox-Media"],
+  "codeowners": ["@Smart-Revolutions"],
   "config_flow": true,
   "dependencies": [],
-  "documentation": "https://github.com/Dreamfox-Media/digital-lifeline-ha",
+  "documentation": "https://github.com/Smart-Revolutions/digital-lifeline-ha",
   "integration_type": "service",
   "iot_class": "cloud_push",
-  "issue_tracker": "https://github.com/Dreamfox-Media/digital-lifeline-ha/issues",
+  "issue_tracker": "https://github.com/Smart-Revolutions/digital-lifeline-ha/issues",
   "requirements": [],
   "version": "0.1.2"
 }
