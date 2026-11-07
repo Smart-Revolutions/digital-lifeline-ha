@@ -245,4 +245,4 @@ verlaat je netwerk.
 
 ---
 
-<p align="center"><sub>Made with ❤️ by <a href="https://smartrevolutions.nl">smartrevolutions.nl</a> · © Dreamfox Media · MIT License</sub></p>
+<p align="center"><sub>Made with ❤️ by <a href="https://smartrevolutions.nl">smartrevolutions.nl</a> · © Smart Revolutions · MIT License</sub></p>
