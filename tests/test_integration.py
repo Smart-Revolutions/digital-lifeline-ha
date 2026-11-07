@@ -152,3 +152,22 @@ async def test_discover_ignores_mapped_entities_that_cannot_alarm(hass: HomeAssi
         ],
     )
     assert found["val_detectie"] == ["binary_sensor.radar_fall", "sensor.radar_fall_status"]
+
+
+async def test_watched_sensors_overview(hass: HomeAssistant):
+    hass.states.async_set("binary_sensor.bedroom_fall", "off", {"friendly_name": "Bedroom fall detected"})
+    hass.states.async_set("binary_sensor.smoke_kitchen", "off", {"device_class": "smoke"})
+    with _portal():
+        await _setup(hass, _entry())
+        state = hass.states.get("sensor.digital_lifeline_watched_sensors")
+        assert state.state == "2"
+        assert state.attributes["val_detectie"] == [
+            {"entity_id": "binary_sensor.bedroom_fall", "name": "Bedroom fall detected", "state": "off"}
+        ]
+        assert state.attributes["rookmelder"][0]["entity_id"] == "binary_sensor.smoke_kitchen"
+        assert state.attributes["noodknop"] == []
+
+        hass.states.async_set("binary_sensor.bedroom_fall", "on", {"friendly_name": "Bedroom fall detected"})
+        await hass.async_block_till_done()
+        state = hass.states.get("sensor.digital_lifeline_watched_sensors")
+        assert state.attributes["val_detectie"][0]["state"] == "on"

@@ -26,7 +26,7 @@ from .discovery import discover, flatten
 from .event_queue import EventQueue
 
 _LOGGER = logging.getLogger(__name__)
-PLATFORMS: list[Platform] = [Platform.BINARY_SENSOR]
+PLATFORMS: list[Platform] = [Platform.BINARY_SENSOR, Platform.SENSOR]
 
 type LifelineConfigEntry = ConfigEntry[LifelineCoordinator]
 

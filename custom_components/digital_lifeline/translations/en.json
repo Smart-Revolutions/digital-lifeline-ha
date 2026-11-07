@@ -57,6 +57,11 @@
       "incident": {
         "name": "Open incident"
       }
+    },
+    "sensor": {
+      "watched": {
+        "name": "Linked sensors"
+      }
     }
   },
   "issues": {
