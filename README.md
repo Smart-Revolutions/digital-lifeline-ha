@@ -67,7 +67,7 @@ Learn more about the project, or sign up to test it, at **[ha.digilifeline.com](
 </p>
 
 1. A critical sensor in Home Assistant triggers (for example fall detection).
-2. The integration puts the event in a **persistent queue** and sends it to the portal straight away.
+2. The integration saves the event in Home Assistant and sends it to the portal straight away.
 3. The portal removes duplicates, opens an **incident** and runs its emergency chain: app notification,
    e-mail and SMS backup to the people you chose.
 4. Every minute the integration sends a **heartbeat**. As long as it arrives, the portal shows a
@@ -119,8 +119,9 @@ incident is created and nobody is notified).
 
 ## Reliability
 
-- Events go into a persistent queue first. If the portal or your internet is down, they are kept (also
-  across a Home Assistant restart) and re-sent with back-off. Late events are marked as such.
+- Alerts are first saved inside Home Assistant and only removed once the portal has confirmed them. If the
+  portal or your internet is down, they are kept (also across a Home Assistant restart) and sent again.
+  Every alert carries the time the sensor triggered, even if it arrives later.
 - Every event has a unique id; the portal ignores duplicates.
 - If a critical sensor becomes `unavailable` or its battery is ≤ 10 %, the portal is told so (a silent
   smoke detector is a risk too).
@@ -189,7 +190,7 @@ Meer over het project, of aanmelden als tester: **[ha.digilifeline.nl](https://h
 </p>
 
 1. Een kritieke sensor in Home Assistant gaat af (bijvoorbeeld valdetectie).
-2. De integratie zet de melding in een **duurzame wachtrij** en verstuurt hem meteen naar het portaal.
+2. De integratie bewaart de melding in Home Assistant en verstuurt hem meteen naar het portaal.
 3. Het portaal filtert dubbele meldingen, opent een **incident** en start de noodketen: pushmelding in de
    app, e-mail en sms als back-up, naar de mensen die jij hebt gekozen.
 4. Elke minuut stuurt de integratie een **levensteken**. Zolang dat aankomt, toont het portaal een
@@ -241,9 +242,10 @@ incident en niemand krijgt een melding).
 
 ## Betrouwbaarheid
 
-- Meldingen gaan eerst in een duurzame wachtrij. Is het portaal of je internet tijdelijk weg, dan blijven
-  ze bewaard (ook na een herstart van Home Assistant) en worden ze opnieuw verstuurd. Late meldingen
-  worden als zodanig gemarkeerd.
+- Meldingen worden eerst bewaard in Home Assistant en pas gewist als het portaal ze heeft bevestigd. Is het
+  portaal of je internet tijdelijk weg, dan blijven ze bewaard (ook na een herstart van Home Assistant) en
+  worden ze opnieuw verstuurd. Elke melding draagt het tijdstip waarop de sensor afging, ook als hij later
+  aankomt.
 - Elke melding heeft een uniek id; het portaal negeert dubbele meldingen.
 - Wordt een kritieke sensor `unavailable` of is de batterij ≤ 10 %, dan meldt de integratie dat aan het
   portaal (een stille rookmelder is ook een risico).
