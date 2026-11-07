@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 DOMAIN = "digital_lifeline"
-INTEGRATION_VERSION = "0.1.3"
+INTEGRATION_VERSION = "0.1.4"
 
 CONF_URL = "url"
 CONF_TOKEN = "token"
