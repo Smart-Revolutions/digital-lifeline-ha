@@ -89,6 +89,19 @@ Detected automatically (you can change this in the integration's **Configure** d
 
 Sensors that are already mapped in the portal are added automatically.
 
+### Choose your own sensors
+
+Is a sensor not detected, or do you want to leave one out? Pick them yourself:
+
+1. Go to **Settings → Devices & services → DigiLifeline** and click **Configure**.
+2. For each category (**Fall detection**, **Alert / panic button**, **Smoke / CO detector**, **Water leak**)
+   select the entities that belong to it. You can choose `binary_sensor`, `event`, `button` and `sensor` entities.
+3. Click **Submit**. The integration reloads by itself and applies your choice straight away.
+
+From then on, every selected sensor sends an alert to the portal the moment it triggers. Your
+selection replaces the automatic detection; the list of watched sensors is also sent to the portal
+with every heartbeat. An entity can only be in one category (the first category in the list wins).
+
 ## Install (HACS)
 
 You need a DigiLifeline account. Not a user yet? See [ha.digilifeline.com](https://ha.digilifeline.com).
@@ -196,6 +209,19 @@ Automatisch herkend (aan te passen via **Configureren** bij de integratie):
 | Waterlek | `binary_sensor` met device class `moisture` |
 
 Sensoren die al in het portaal zijn gekoppeld, worden automatisch toegevoegd.
+
+### Zelf sensoren kiezen
+
+Wordt een sensor niet herkend, of wil je er eentje uitsluiten? Kies ze dan zelf:
+
+1. Ga naar **Instellingen → Apparaten & services → DigiLifeline** en klik op **Configureren**.
+2. Selecteer per categorie (**Valdetectie**, **Noodknop / paniekknop**, **Rook-/CO-melder**, **Waterlekkage**)
+   de entiteiten die erbij horen. Je kunt `binary_sensor`-, `event`-, `button`- en `sensor`-entiteiten kiezen.
+3. Klik op **Verzenden**. De integratie laadt zichzelf opnieuw en past je keuze direct toe.
+
+Vanaf dat moment stuurt elke gekozen sensor op het moment dat die afgaat een melding naar het portaal.
+Je keuze vervangt de automatische herkenning; de lijst met bewaakte sensoren gaat bij elk levensteken
+ook naar het portaal. Een entiteit kan maar in één categorie zitten (de eerste categorie in de lijst wint).
 
 ## Installeren (HACS)
 
