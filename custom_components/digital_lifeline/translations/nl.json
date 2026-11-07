@@ -4,12 +4,17 @@
       "user": {
         "title": "DigiLifeline",
         "description": "Zet eerst de Home Assistant-app aan in het DigiLifeline-portaal en plak daarna de webhook-URL en het token die daar staan.",
-        "data": { "url": "Webhook-URL", "token": "Token" }
+        "data": {
+          "url": "Webhook-URL",
+          "token": "Token"
+        }
       },
       "reauth_confirm": {
         "title": "Token bijwerken",
         "description": "Het portaal weigerde het token. Plak het huidige token uit het portaal.",
-        "data": { "token": "Token" }
+        "data": {
+          "token": "Token"
+        }
       }
     },
     "error": {
@@ -28,20 +33,30 @@
     "step": {
       "init": {
         "title": "Kritieke sensoren",
-        "description": "Kies welke entiteiten direct een melding geven. Standaard automatisch gedetecteerd.",
+        "description": "Kies per categorie welke entiteiten direct een alarm sturen naar het DigiLifeline-portaal. Leeg laten = automatisch gedetecteerd. De gekozen sensoren worden ook in het portaal getoond.",
         "data": {
           "val_detectie": "Valdetectie",
-          "noodknop": "Waarschuwings-/paniekknop",
+          "noodknop": "Noodknop / paniekknop",
           "rookmelder": "Rook-/CO-melder",
           "waterlek": "Waterlekkage"
+        },
+        "data_description": {
+          "val_detectie": "Sensoren die een val melden. Direct alarm zodra de status 'aan' wordt.",
+          "noodknop": "Knoppen of hangers die iemand zelf indrukt. Direct alarm bij elke druk.",
+          "rookmelder": "Rook- en koolmonoxidemelders. Direct alarm bij detectie.",
+          "waterlek": "Lekkagesensoren. Direct alarm bij detectie."
         }
       }
     }
   },
   "entity": {
     "binary_sensor": {
-      "connection": { "name": "Verbinding met portaal" },
-      "incident": { "name": "Open incident" }
+      "connection": {
+        "name": "Verbinding met portaal"
+      },
+      "incident": {
+        "name": "Open incident"
+      }
     }
   },
   "issues": {

@@ -15,7 +15,6 @@ from homeassistant.helpers.event import async_track_state_change_event
 from .client import LifelineClient, parse_webhook_url
 from .const import (
     CONF_ENTITIES,
-    CONF_HOUSEHOLD,
     CONF_MAPPED,
     CONF_TOKEN,
     CONF_URL,

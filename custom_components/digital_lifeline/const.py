@@ -31,6 +31,5 @@ EVENT_INCIDENT = f"{DOMAIN}_incident"
 SERVICE_SEND_TEST = "send_test_event"
 
 ISSUE_DISABLED = "integration_disabled"
-ISSUE_UNREACHABLE = "portal_unreachable"
 
 TEST_ENTITY_ID = "digital_lifeline.test"
