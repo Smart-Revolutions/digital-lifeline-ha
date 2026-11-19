@@ -269,7 +269,7 @@ verlaat je netwerk.
 ## Links
 
 - Project en aanmelden: [ha.digilifeline.nl](https://ha.digilifeline.nl)
-- Portaal: [mijn.digitallifeline.nl](https://mijn.digitallifeline.nl)
+- Portaal: [mijn.digilifeline.nl](https://mijn.digilifeline.nl)
 - Vragen of problemen: [maak een issue aan](https://github.com/Smart-Revolutions/digital-lifeline-ha/issues)
 - Met ❤️ gemaakt door [smartrevolutions.nl](https://smartrevolutions.nl)
 
