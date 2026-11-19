@@ -21,7 +21,7 @@
 <p align="center">
   <a href="https://my.digilifeline.com"><img alt="Portal" src="https://img.shields.io/badge/portal-my.digilifeline.com-1d6fa5"></a>
   <a href="https://github.com/Smart-Revolutions/digital-lifeline-ha/releases"><img alt="Release" src="https://img.shields.io/github/v/release/Smart-Revolutions/digital-lifeline-ha"></a>
-  <a href="https://hacs.xyz"><img alt="HACS custom repository" src="https://img.shields.io/badge/HACS-custom%20repository-41bdf5"></a>
+  <a href="https://hacs.xyz"><img alt="HACS default" src="https://img.shields.io/badge/HACS-default-41bdf5"></a>
   <a href="LICENSE"><img alt="License MIT" src="https://img.shields.io/github/license/Smart-Revolutions/digital-lifeline-ha"></a>
 </p>
 
@@ -107,7 +107,9 @@ with every heartbeat. An entity can only be in one category (the first category 
 You need a DigiLifeline account. Not a user yet? See [ha.digilifeline.com](https://ha.digilifeline.com).
 
 1. In the portal: **Dashboard → Connection → Lifeline Home Assistant app** → switch it on.
-2. In Home Assistant: **HACS → ⋮ → Custom repositories** → add
+2. In Home Assistant: open **HACS** (or **Settings → Marketplace** from Home Assistant 2026.11) and
+   search for **DigiLifeline**.
+   Not listed yet? Use **HACS → ⋮ → Custom repositories** and add
    `https://github.com/Smart-Revolutions/digital-lifeline-ha` as category **Integration**.
 3. Install **DigiLifeline**, restart Home Assistant.
 4. **Settings → Devices & services → Add integration → DigiLifeline**, paste the webhook URL and
@@ -230,7 +232,9 @@ ook naar het portaal. Een entiteit kan maar in één categorie zitten (de eerste
 Je hebt een DigiLifeline-account nodig. Nog geen gebruiker? Kijk op [ha.digilifeline.nl](https://ha.digilifeline.nl).
 
 1. In het portaal: **Dashboard → Verbinding → Lifeline Home Assistant-app** → zet de app aan.
-2. In Home Assistant: **HACS → ⋮ → Aangepaste repositories** → voeg
+2. In Home Assistant: open **HACS** (of **Instellingen → Marktplaats** vanaf Home Assistant 2026.11) en
+   zoek naar **DigiLifeline**.
+   Staat hij er niet tussen? Gebruik dan **HACS → ⋮ → Aangepaste repositories** en voeg
    `https://github.com/Smart-Revolutions/digital-lifeline-ha` toe als categorie **Integratie**.
 3. Installeer **DigiLifeline** en herstart Home Assistant.
 4. **Instellingen → Apparaten & services → Integratie toevoegen → DigiLifeline**, plak de webhook-URL
